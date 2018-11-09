@@ -12,11 +12,17 @@ export default class Position {
   }
 
   neighbors() {
-  let neighbor=[];
-  neighbor.add(new Position(this.row+1,this.column));
-  return neighbor;
+    let neighbor = [];
+    neighbor.add(new Position(this.row + 1, this.column));
+    neighbor.add(new Position(this.row - 1, this.column));
+    neighbor.add(new Position(this.row, this.column + 1));
+    neighbor.add(new Position(this.row, this.column - 1));
+    neighbor.add(new Position(this.row + 1, this.column + 1));
+    neighbor.add(new Position(this.row + 1, this.column - 1));
+    neighbor.add(new Position(this.row - 1,this.column + 1));
+    neighbor.add(new Position(this.row - 1, this.column - 1));
 
-
+    return neighbor;
   }
 
 
